@@ -1,8 +1,6 @@
 import cv2                # Biblioteca para abrir a camera
 import mediapipe as mp    # Biblioteca para a detecção de pontos de referência
 from math import hypot              # Vai medir a distância entre os pontos
-import PySimpleGUI as sg
-from time import sleep
 
 
 video = cv2.VideoCapture(0) # Variável que armazena a função de captura de video,
@@ -57,7 +55,7 @@ def polichinelos():
         # A conversão de uma imagem opencv2 para uma imagem RGB
         videoRGB = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
 
-        novaimg = cv2.resize(img, (1280, 900))
+        novaimg = cv2.resize(img, (800, 600))
 
 
         # Essa variável vai armazenar o resultado do processamento do nosso video
@@ -157,19 +155,19 @@ def polichinelos():
             texto = f'QTD {contador}'
 
             if quadrilDireitoY >= 600:
-                texto = f'Se afaste um pouco'
+                texto = f'Se afaste'
 
 
             ### Função que cria a forma
             # De um retângulo no video
-            cv2.rectangle(novaimg,(1200,800),(50,700),(255,0,0),-1)
+            cv2.rectangle(novaimg,(100,450),(700,550),(255,0,0),-1)
 
             ### Função que cria a forma
             # De um retângulo no video
 
             # Função para adicionar um texto a área de informações	
-            cv2.putText(novaimg,texto,(40,760),cv2.FONT_HERSHEY_SIMPLEX,2,(255,255,255),5)
-
+            cv2.putText(novaimg,texto,(120,525),cv2.FONT_HERSHEY_SIMPLEX,2,(255,255,255),5)
+            
 
         cv2.imshow('Resultado',novaimg)
         if cv2.waitKey(1) == 27:
@@ -195,7 +193,7 @@ def agachamento():
         # O opencv Não usa o padrão RGB, então normalmente essa função é usada para
         # A conversão de uma imagem opencv2 para uma imagem RGB
         videoRGB = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
-        novaimg = cv2.resize(img, (1280, 900))
+        novaimg = cv2.resize(img, (800, 600))
 
 
         # Essa variável vai armazenar o resultado do processamento do nosso video
@@ -301,13 +299,13 @@ def agachamento():
 
             ### Função que cria a forma
             # De um retângulo no video'
-            cv2.rectangle(novaimg,(1200,800),(50,700),(255,0,0),-1)
+            cv2.rectangle(novaimg,(100,450),(700,550),(255,0,0),-1)
 
             ### Função que cria a forma
             # De um retângulo no video
 
             # Função para adicionar um texto a área de informações	
-            cv2.putText(novaimg,texto,(40,760),cv2.FONT_HERSHEY_SIMPLEX,2,(255,255,255),5)
+            cv2.putText(novaimg,texto,(120,525),cv2.FONT_HERSHEY_SIMPLEX,2,(255,255,255),5)
             
 
 
@@ -336,7 +334,7 @@ def rosca_direta():
         # A conversão de uma imagem opencv2 para uma imagem RGB
         videoRGB = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
 
-        novaimg = cv2.resize(img, (1280, 900))
+        novaimg = cv2.resize(img, (800, 600))
 
 
         # Essa variável vai armazenar o resultado do processamento do nosso video
@@ -417,13 +415,13 @@ def rosca_direta():
 
             ### Função que cria a forma
             # De um retângulo no video
-            cv2.rectangle(novaimg,(1200,800),(50,700),(255,0,0),-1)
+            cv2.rectangle(novaimg,(100,450),(700,550),(255,0,0),-1)
 
             ### Função que cria a forma
             # De um retângulo no video
 
             # Função para adicionar um texto a área de informações	
-            cv2.putText(novaimg,texto,(40,760),cv2.FONT_HERSHEY_SIMPLEX,2,(255,255,255),5)
+            cv2.putText(novaimg,texto,(120,525),cv2.FONT_HERSHEY_SIMPLEX,2,(255,255,255),5)
             
 
 
@@ -452,7 +450,7 @@ def elevação_lateral():
         # A conversão de uma imagem opencv2 para uma imagem RGB
         videoRGB = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
 
-        novaimg = cv2.resize(img, (1280, 900))
+        novaimg = cv2.resize(img, (800, 600))
 
 
         # Essa variável vai armazenar o resultado do processamento do nosso video
@@ -517,7 +515,7 @@ def elevação_lateral():
                  # Mais de um polichinelo
                 print(False)
 
-            if maoDY >= quadrilDY-200 and maoEY >= quadrilDY-200:
+            if maoDY >= quadrilDY-100 and maoEY >= quadrilDY-100:
                 check = True # Quando o ultimo movimento é feito altera a variável para true
              # Para permitir que outro polichinelo seja finalizado e computado
                 print(True)
@@ -532,13 +530,13 @@ def elevação_lateral():
 
             ### Função que cria a forma
             # De um retângulo no video
-            cv2.rectangle(novaimg,(1200,800),(50,700),(255,0,0),-1)
+            cv2.rectangle(novaimg,(100,450),(700,550),(255,0,0),-1)
 
             ### Função que cria a forma
             # De um retângulo no video
 
             # Função para adicionar um texto a área de informações	
-            cv2.putText(novaimg,texto,(40,760),cv2.FONT_HERSHEY_SIMPLEX,2,(255,255,255),5)
+            cv2.putText(novaimg,texto,(120,525),cv2.FONT_HERSHEY_SIMPLEX,2,(255,255,255),5)
             
 
 

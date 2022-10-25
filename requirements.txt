@@ -1,7 +1,5 @@
-modo
 PySimpleGUI
 openpyxl
 opencv-python
 mediapipe
 pandas
-keyboard
